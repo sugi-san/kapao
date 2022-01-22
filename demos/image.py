@@ -118,5 +118,5 @@ if __name__ == '__main__':
     if data['use_kp_dets']:
         filename += '_kp_obj'
     filename += '.png'
-    cv2.imwrite(filename, im0)
+    cv2.imwrite('out.png', im0)
 
