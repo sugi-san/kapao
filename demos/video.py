@@ -143,7 +143,7 @@ if __name__ == '__main__':
 
     write_video = not args.display and not args.gif
     if write_video:
-        writer = cv2.VideoWriter(out_path + '.mp4',
+        writer = cv2.VideoWriter('output.mp4',
                                  cv2.VideoWriter_fourcc(*'mp4v'), fps, (w, h))
 
     dataset = tqdm(dataset, desc='Running inference', total=n)
