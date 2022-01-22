@@ -118,8 +118,9 @@ if __name__ == '__main__':
     video_name = 'squash_inference_{}'.format(osp.splitext(args.weights)[0])
 
     if not args.display:
-        writer = cv2.VideoWriter(video_name + '.mp4',
+        writer = cv2.VideoWriter('out.mp4',
                                  cv2.VideoWriter_fourcc(*'mp4v'), fps, (w, h))
+        # video_name + '.mp4' > 'out.mp4'
         if not args.fps:  # tqdm might slows down inference
             dataset = tqdm(dataset, desc='Writing inference video', total=n)
 
